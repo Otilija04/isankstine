@@ -68,9 +68,17 @@ int main() {
         outputFile << url << std::endl;
     }
 
+    
+    outputFile << "\nZodziai su 'ion':" << std::endl;
+    for (const auto& entry : wordOccurrences) {
+        if (entry.first.find("ion") != std::string::npos) {
+            outputFile << entry.first << std::endl;
+        }
+    }
+
     outputFile.close();
 
-    std::cout << "Viskas veikia. Rezultatai outpute" << std::endl;
+    std::cout << "Viskas pavyko. Rezultatai  outputas.txt. faile" << std::endl;
 
     return 0;
 }
